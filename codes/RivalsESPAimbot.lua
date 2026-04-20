@@ -69,7 +69,7 @@ dragBarFix.Parent = dragBar
 local dragIcon = Instance.new("TextLabel")
 dragIcon.Size = UDim2.new(1, 0, 1, 0)
 dragIcon.BackgroundTransparency = 1
-dragIcon.Text = "⠿  Con Ex  [L]"
+dragIcon.Text = "ESP & Aimbot  [L]"
 dragIcon.TextColor3 = Color3.fromRGB(160, 160, 160)
 dragIcon.Font = Enum.Font.GothamBold
 dragIcon.TextSize = 13
@@ -1174,9 +1174,9 @@ espToggleBtn.MouseButton1Click:Connect(function()
 	espEnabled = not espEnabled
 	if espEnabled then
 		espToggleBtn.Text       = "ESP  ON"
-		espToggleBtn.TextColor3 = espColor
+		espToggleBtn.TextColor3 = Color3.fromRGB(0, 255, 0)
 		TweenService:Create(espToggleBtn,    TweenInfo.new(0.15), { BackgroundColor3 = Color3.fromRGB(20,45,20) }):Play()
-		TweenService:Create(espToggleStroke, TweenInfo.new(0.15), { Color = espColor }):Play()
+		TweenService:Create(espToggleStroke, TweenInfo.new(0.15), { Color = Color3.fromRGB(0, 200, 0) }):Play()
 	else
 		espToggleBtn.Text       = "ESP  OFF"
 		espToggleBtn.TextColor3 = Color3.fromRGB(160,160,160)
@@ -1390,7 +1390,7 @@ local visible = true
 
 UserInputService.InputBegan:Connect(function(input, gameProcessed)
 	if gameProcessed then return end
-	if input.KeyCode == Enum.KeyCode.RightShift then
+	if input.KeyCode == Enum.KeyCode.L then
 		visible       = not visible
 		bgBox.Visible = visible
 		bgBox.Active  = visible
