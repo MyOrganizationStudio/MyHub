@@ -2,7 +2,7 @@
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./README/dark.png" width="200" height="67">
     <source media="(prefers-color-scheme: light)" srcset="./README/light.png" width="200" height="67">
-    <img alt="vape logo" src="./README/vapelogo.png">
+    <img alt="MyHub">
   </picture>
 </p>
 
@@ -11,5 +11,5 @@
 </h6>
 
 ```lua
-loadstring(game:HttpGet("https://raw.githubusercontent.com/RiseBlox/MyHub/refs/heads/main/MyHub.lua", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/RiseBlox/MyHub/main/MyHub.lua", true))()
 ```

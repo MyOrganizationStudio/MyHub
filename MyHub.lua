@@ -4,24 +4,21 @@
   /\/\  _   _  /\  /\_   _| |__
  /    \| | | |/ /_/ / | | | '_ \
 / /\/\ \ |_| / __  /| |_| | |_) |
-\/    \/\__, \/ /_/  \__,_|_.__/  v4.enhanced
+\/    \/\__, \/ /_/  \__,_|_.__/  REMASTERED
         |___/
 
 ]]
 
-local function sendNotification(text, duration, title)
-	if game.PlaceId == 606849621 then
-		require(game:GetService("ReplicatedStorage").Game.Notification).new({
-			Text = text,
-			Duration = duration
-		})
-	else
-		game:GetService("StarterGui"):SetCore("SendNotification", {
-			Title = title,
-			Text = text
-		})
-	end
+if game.PlaceId == 606849621 then
+	require(game:GetService("ReplicatedStorage").Game.Notification).new({
+		Text = "Successfully loaded!",
+		Duration = 2
+	})
+else
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = "MyHub [REMASTERED]",
+		Text = "Successfully loaded!"
+	})
 end
-sendNotification("Successfully loaded!", 2, "MyHub V4 [ENHANCED]")
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/MyOrganizationStudio/MyHub/main/MyHub.luau", true))()
